@@ -53,11 +53,11 @@ export default function Step1() {
     };
 
 
-    const formStyle = {
+    const formStyle: React.CSSProperties = {
         maxWidth: '600px',
         margin: '0 auto',
         padding: '20px',
-        textAlign: 'center',
+        textAlign: 'start',
     };
 
     // Progress bar styles

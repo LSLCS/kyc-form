@@ -51,7 +51,7 @@ export default function Step2() {
     };
 
 
-    const formStyle = {
+    const formStyle: React.CSSProperties = {
         maxWidth: '600px',
         margin: '0 auto',
         padding: '20px',

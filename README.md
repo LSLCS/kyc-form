@@ -38,4 +38,4 @@ npm run dev
 The app will be available at `http://localhost:3000`.  
 
 ## **Vercel**  
-
+https://kyc-form-taupe.vercel.app/

@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 export default function Home() {
     const router = useRouter();
 
-    const divStyle = {
+    const divStyle: React.CSSProperties = {
         maxWidth: '600px',
         margin: '0 auto',
         padding: '20px',

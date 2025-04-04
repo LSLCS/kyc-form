@@ -1,15 +1,33 @@
 "use client"; 
-import { useForm } from 'react-hook-form';
+import { useForm, SubmitHandler, FieldValues } from 'react-hook-form';
 import { useFormContext } from '../context/FormContext';
 import { useRouter } from 'next/navigation';
+// import { useEffect } from 'react';
+
+interface Step1Data {
+    firstName: string;
+    lastName: string;
+    dob: string;
+    phoneNumber: string;
+    email: string;
+}
 
 export default function Step1() {
-    const { register, handleSubmit, formState: { errors } } = useForm();
     const { formData, setFormData } = useFormContext();
     const router = useRouter();
+    const { register, handleSubmit, formState: { errors } } = useForm<Step1Data>({
+        defaultValues: formData, // Use stored form data to persist values
+    });
 
+    // useEffect(() => {
+    //     // Prefill input fields when the component loads
+    //     Object.keys(formData).forEach((key) => {
+    //         setValue(key as keyof typeof formData, formData[key as keyof typeof formData]);
+    //     });
+    // }, [formData, setValue]);
 
-    const onSubmit = (data: any) => {
+    // Use the generic FieldValues type
+    const onSubmit: SubmitHandler<FieldValues> = (data) => {
         setFormData({ ...formData, ...data });
         router.push('/step2');
     };

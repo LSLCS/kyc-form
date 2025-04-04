@@ -37,13 +37,5 @@ npm run dev
 ```
 The app will be available at `http://localhost:3000`.  
 
-## **Deployment**  
-To deploy on Vercel, run:  
-```sh
-vercel
-```
-The live link will be generated after deployment.
-
-## **Contributing**  
-Feel free to fork the project and submit pull requests! 🚀
+## **Vercel**  
 

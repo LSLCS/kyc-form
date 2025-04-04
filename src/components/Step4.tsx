@@ -28,7 +28,7 @@ export default function Step3() {
         };
     
     
-        const divStyle = {
+        const divStyle: React.CSSProperties = {
             maxWidth: '600px',
             margin: '0 auto',
             padding: '20px',
